@@ -1,0 +1,57 @@
+html {
+    display: flex;
+}
+
+main {
+    margin-top: 50px;
+    background-color: blueviolet;
+}
+
+section {
+    padding-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.text-introduccio {
+    margin: 5rem;
+    justify-content: center;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.introduccio, h2 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.serveis-imatges {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.imatges-grid {
+    display: flex;
+    direction: rtl;
+}
+
+.imatges-grid > div {
+    border-radius: 10px;
+    box-shadow: 5px 0 5px gray,
+     -5px 0 5px gray;
+}
+
+.servei-card img {
+    max-width: 80px;
+    max-height: 80px;
+}

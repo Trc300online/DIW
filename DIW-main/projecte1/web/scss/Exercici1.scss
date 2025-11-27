@@ -1,0 +1,38 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.color-grid > div {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@for $valor-vermell from 0 through 100 {
+    @if $valor-vermell % 5 == 0 {
+        @for $valor-blau from 0 through 100{
+            @if $valor-blau % 5 == 0 {
+                .color-r#{$valor-vermell}-b#{$valor-blau}{
+                    background-color: rgb($valor-vermell*2.55, 0, $valor-blau*2.55);
+                }
+            }
+        }
+    }
+}

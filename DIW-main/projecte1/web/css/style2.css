@@ -1,0 +1,33 @@
+.titol {
+  color: darkblue;
+  font-size: 1.5rem;
+}
+
+.targeta-producte {
+  width: 300px;
+  border: 1px solid;
+  border-color: black;
+  padding: 1.5rem;
+}
+
+.descripcio {
+  color: gray;
+  font-size: 1rem;
+}
+
+.preu {
+  color: green;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.boto-compra {
+  background-color: blue;
+  color: white;
+  padding: 1rem 1.5rem;
+}
+.boto-compra:hover {
+  background-color: darkblue;
+}
+
+/*# sourceMappingURL=style2.css.map */

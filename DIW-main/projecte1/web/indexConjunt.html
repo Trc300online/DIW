@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activitat 4 - Header amb icono i navegació</title>
+    <link rel="stylesheet" href="css/styleConjuntV3.css">
+</head>
+<body>
+    <header class="header px-6 d-flex">
+        <div class="logo">
+            <img src="https://beelinguae.com/wp-content/uploads/2025/07/2025-07-28-21_38_36-Straw-Hat-_-One-Piece-Wiki-_-Fandom.png" alt="Logo">
+        </div>
+        <nav class="navegacio">
+            <a href="#" class="enllaç actiu py-2 px-4">Inici</a>
+            <a href="#" class="enllaç py-2 px-4">Sobre nosaltres</a>
+            <a href="#" class="enllaç py-2 px-4">Serveis</a>
+            <a href="#" class="enllaç py-2 px-4">Blog</a>
+            <a href="#" class="enllaç py-2 px-4">Contacte</a>
+        </nav>
+    </header>
+    <h1 class="titol mt-4">Els nostres serveis</h1>
+     <div class="galeria p-6 d-flex">
+        <div class="galeria-item">
+            <div class="imatge-container">
+                <img src=img/consultoria_web.jpg alt="Imatge 1" class="d-block">
+            </div>
+            <h4 class="titol mt-4">Consultoria web</h4>
+        </div>
+        <div class="galeria-item">
+            <div class="imatge-container">
+                <img src=img/desarrollo_web.png alt="Imatge 2" class="d-block">
+            </div>
+            <h4 class="titol mt-4">Desenvolupament web</h4>
+        </div>
+        <div class="galeria-item">
+            <div class="imatge-container">
+                <img src=img/diseno_web.jpg alt="Imatge 3" class="d-block">
+            </div>
+            <h4 class="titol mt-4">Diseñ web</h4>
+        </div>
+    </div>
+    <h1 class="titol mt-4">El nostre equip</h1>
+    <div class="equip p-6 d-flex">
+        <div class="membre-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria" class="avatar mb-4">
+            <h3 class="nom mb-2">Maria García</h3>
+            <p class="carrec mb-4">Directora de Projectes</p>
+            <div class="xarxes d-flex">
+                <a href="#" class="xarxa-enllaç d-inline-block">in</a>
+                <a href="#" class="xarxa-enllaç d-inline-block">tw</a>
+                <a href="#" class="xarxa-enllaç d-inline-block">gh</a>
+            </div>
+        </div>
+        <div class="membre-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Joan" class="avatar mb-4">
+            <h3 class="nom mb-2">Joan Martínez</h3>
+            <p class="carrec mb-4">Desenvolupador Senior</p>
+            <div class="xarxes">
+                <a href="#" class="xarxa-enllaç">in</a>
+                <a href="#" class="xarxa-enllaç">tw</a>
+                <a href="#" class="xarxa-enllaç">gh</a>
+            </div>
+        </div>
+        <div class="membre-card">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Laura" class="avatar mb-4">
+            <h3 class="nom mb-2">Laura Pérez</h3>
+            <p class="carrec mb-4">Dissenyadora UX/UI</p>
+            <div class="xarxes">
+                <a href="#" class="xarxa-enllaç">in</a>
+                <a href="#" class="xarxa-enllaç">tw</a>
+                <a href="#" class="xarxa-enllaç">gh</a>
+            </div>
+        </div>
+    </div>
+    <form class="formulari p-6">
+        <h2 class="titol mt-4"> Participa al sorteig!</h2>
+        <div class="camp mb-4">
+            <label>Nom complet</label>
+            <input type="text" placeholder="Escriu el teu nom" class="p-4">
+        </div>
+        <div class="camp mb-4">
+            <label>Correu electrònic</label>
+            <input type="email" placeholder="exemple@correu.com" class="p-4">
+        </div>
+        <div class="camp mb-4">
+            <label>Missatge</label>
+            <textarea rows="5" placeholder="Escriu el teu missatge aquí"></textarea>
+        </div>
+        <button type="submit" class="boto-enviar">Enviar missatge</button>
+    </form>
+    <h1 class="titol mt-4">Premi del sorteig</h1>
+    <div class="targeta-producte">
+        <h3 class="titol mt-4">Auriculars Bluetooth</h3>
+        <p class="descripcio">Auriculars sense fils amb cancel·lació de soroll</p>
+        <p class="preu">valor de mercat: 89,99€</p>
+    </div>
+</body>
+</html>

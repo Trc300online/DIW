@@ -1,0 +1,9 @@
+services: 
+  sass:
+    build: .
+    container_name: project-sass
+    volumes:
+      - ./web:/app
+    working_dir: /app
+    command: sass --watch scss:css
+    restart: unless-stopped

@@ -1,0 +1,175 @@
+@use "sass:math";
+
+@function calcular-font-size($nivell) {
+    $base: 1rem;
+    $escala: 1.25;
+    $min: -3;
+    $max: 5;
+
+    @if $nivell%1 != 0 {
+        $nivell: $nivell - ($nivell%1);
+    }
+    @if $nivell < $min {
+        @warn "la mida més petita es -3";
+        $nivell: $min;
+    }
+    @if $nivell > $max {
+        @warn "la mida més gran es 5";
+        $nivell: $max;
+    }
+
+    $mida: $base * math.pow($escala, $nivell);
+    @return $mida;
+}
+
+@function ajustar-color($color-base, $variant) {
+
+    @if type-of($color-base) != "color" {
+        @error "color invalid";
+    }
+
+    @if $variant == "dark" {
+        @return darken($color-base, 15);
+    } 
+    @if $variant == "darker" {
+        @return darken($color-base, 25);
+    }
+    @if $variant == "light" {
+        @return lighten($color-base, 20);
+    }
+    @if $variant == "lighter" {
+        @return lighten($color-base, 35);
+    }
+    @if $variant == "muted" {
+        @return desaturate($color-base, 30);
+    }
+    @if $variant == "vibrant" {
+        @return saturate($color-base, 20);
+    } @else {
+        @error "variant invalida";
+    }
+}
+
+@function space-mar-pad($valor) {
+    @if $valor == 0 {
+        @return 0rem;
+    } @if $valor == 1 {
+        @return 0.25rem; 
+    }  @if $valor == 2 {
+        @return 0.5rem;
+    } @if $valor == 3 {
+        @return 0.75rem; 
+    }  @if $valor == 4 {
+        @return 1rem;
+    } @if $valor == 5 {
+        @return 1.5rem; 
+    } @if $valor == 6 {
+        @return 2rem; 
+    } @if $valor == 7 {
+        @return 3rem; 
+    } @if $valor == 8 {
+        @return 4rem; 
+    }
+}
+
+@for $i from 0 through 8 {
+    .m-#{$i} {
+        margin: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .mt-#{$i} {
+        margin-top: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .mr-#{$i} {
+        margin-right: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .mb-#{$i} {
+        margin-bottom: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .ml-#{$i} {
+        margin-left: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .mx-#{$i} {
+        margin-inline: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .my-#{$i} {
+        margin-block: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .p-#{$i} {
+        padding: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .pt-#{$i} {
+        padding-top: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .pr-#{$i} {
+        padding-right: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .pb-#{$i} {
+        padding-bottom: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .pl-#{$i} {
+        padding-left: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .px-#{$i} {
+        padding-inline: space-mar-pad($i);
+    }
+}
+@for $i from 0 through 8 {
+    .py-#{$i} {
+        padding-block: space-mar-pad($i);
+    }
+}
+
+
+$displays:  block, inline, inline-block, flex, inline-flex, 
+            grid, inline-grid, none, contents, flow-root;
+
+@each $dispaly in $displays {
+    .d-#{$dispaly} {
+        display: $dispaly;
+    }
+}
+
+$positions: static, relative, absolute, fixed, sticky;
+$position-values: 0, auto;
+$sides: top, right, bottom, left;
+
+@each $position in $positions {
+    .position-#{$position} {
+        position: $position;
+    }
+}
+
+@each $side in $sides {
+    @each $value in $position-values {
+        .#{$side}-#{$value} {
+            #{$side}: $value;   // importante: si usamos variable como 
+                                // propiedad(pading:, margin:,....) 
+                                // se pone asi "#{$variable}:"
+        }
+    }
+}
+

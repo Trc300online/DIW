@@ -1,0 +1,288 @@
+@import "box_shadows";
+@import "distancias";
+@import "paddings";
+@import "margins";
+@import "borders";
+@import "font_sz";
+@import "gaps";
+@import "scales";
+@import "transitions";
+@import "colors";
+@import "functions";
+
+
+@mixin justify-content-center {
+  justify-content: center;
+}
+
+@mixin align-items-center {
+  align-items: center;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin transition-basic {
+  transition: all $transition_time0_3 ease;
+}
+
+@mixin rounded-full {
+  border-radius: $border_radius50x100;
+}
+
+@mixin rounded-soft {
+  border-radius: $border_radius0_5rem;
+}
+
+@mixin width-full {
+  width: $distancia100x100;
+}
+
+@mixin font-bold {
+  font-weight: bold;
+}
+
+@mixin object-cover {
+  object-fit: cover;
+}
+
+@mixin overflow-hidden {
+  overflow: hidden;
+}
+
+@mixin boto-enviar ($size, $hover: false) {
+  padding: $padding1;
+  background-color: $bg_boto_submit;
+  font-size: calcular-font-size(0);
+  color: $color_boto_submit;
+
+  @if $size == "large" { 
+    @include width-full();
+  }@else if $size == "mid" {
+    width: $distancia50x100;
+  }@else if $size == "small" {
+    width: $distancia33x100;
+  }
+  
+  @if $hover {
+    &:hover {
+      background-color: ajustar-color($bg_boto_submit, dark);
+    }
+  }
+}
+ // , $interactive, $padding
+@mixin card ($theme, $padding, $rounded-soft: false, $interactive: false) {
+  @if $rounded-soft {
+    @include rounded-soft();
+  }
+  @if $theme == "default" {
+    background-color: $bg_color_main;
+    box-shadow: $box_shadow;
+  } @else if $theme == "elevated" {
+    background-color: $bg_color_main;
+    box-shadow: $box_shadow_hover;
+  } @else if $theme == "outlined" {
+    border: $border-width0_25rem solid $border_color;
+  } @else if $theme == "dark" {
+    color: $text_color_white;
+    background-color: $bg_color_balck;
+  } @else if $theme == "gradiant-top" {
+    background-image: linear-gradient(to bottom, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-izquierda" {
+    background-image: linear-gradient(to right, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-derecha" {
+    background-image: linear-gradient(to left, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-bottom" {
+    background-image: linear-gradient(to top, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-top-iz" {
+    background-image: linear-gradient(to bottom right, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-top-der" {
+    background-image: linear-gradient(to bottom left, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-bottom-iz" {
+    background-image: linear-gradient(to top right, $bg_color_main, ajustar-color($bg_color2, light))
+  } @else if $theme == "gradiant-bottom-der" {
+    background-image: linear-gradient(to top left, $bg_color_main, ajustar-color($bg_color2, light))
+  }
+  @if $padding == "p-default"{
+    padding: $padding1_5;
+  } @else {
+    padding: $padding;
+  }
+  @if $interactive {
+    &:hover {
+        transform: translateY(-$distancia0_5);
+      }
+    @include transition-basic();
+  }
+
+  @include text-center();
+  
+
+  @content
+}
+
+body {
+  background-color: $bg_color_main;
+
+  .header,
+  .galeria,
+  .equip {
+    @include justify-content-center();
+  }
+
+  .header {
+    @include align-items-center();
+    height: $distancia4;
+
+    .logo img {
+      width: $distancia2_5;
+    }
+
+    .navegacio {
+      display: inline;
+      gap: $gap0_3;
+
+      .enllaç {
+        color: ajustar-color($text_color_gray, dark);
+        text-decoration: none;
+        position: relative;
+
+        &:hover,
+        &.actiu {
+          color: $link_color;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .galeria {
+    gap: $gap1;
+
+    .galeria-item {
+      width: $distancia33x100;
+
+      .imatge-container {
+        @include overflow-hidden();
+        box-shadow: $box_shadow;
+
+        img {
+          @include width-full();
+
+          &:hover {
+            box-shadow: $box_shadow_hover;
+            scale: $scale1_1;
+          }
+        }
+      }
+
+      .titol {
+        justify-self: center;
+        font-size: calcular-font-size(1);//$font_sz18px;
+        color: ajustar-color($titol_color_Khaki, dark);
+      }
+    }
+  }
+
+  .equip {
+    gap: $gap1_5;
+    background-color: $bg_color_main;
+
+    .membre-card {
+      @include card("default", "p-default", $rounded-soft: true, $interactive: true);
+      width: $distancia18;
+
+      .avatar {
+        height: $distancia7_5;
+        width: $distancia7_5;
+        border: $border-width0_25rem solid $border_focus;
+        @include object-cover();
+      }
+
+      .nom {
+        color: ajustar-color($text_color_gray, dark);
+        font-size: calcular-font-size(2);//$font_sz1_5rem;
+        @include font-bold();
+      }
+
+      .carrec {
+        color: ajustar-color($text_color_gray, light);//$text_color_lightGray;
+        font-size: calcular-font-size(0);//$font_sz1rem;
+      }
+
+      .xarxes {
+        @include justify-content-center();
+        gap: $gap0_75;
+
+        .xarxa-enllaç {
+          width: $distancia2_5;
+          height: $distancia2_5;
+          @include rounded-full();
+          background-color: ajustar-color($bg_color3, lighter);
+          color: ajustar-color($text_color_gray, light);
+          line-height: $distancia2_5;
+          @include transition-basic();
+          text-decoration: none;
+
+          &:hover {
+            background-color: $link_color;
+            color: $text_color_white;
+          }
+        }
+      }
+
+    }
+  }
+
+  .formulari {
+    max-width: $distancia36;
+    margin: auto;
+
+    .camp {
+
+      label {
+        @include font-bold();
+      }
+
+      input {
+        @include width-full();
+        border: $border-width1px solid $border_color;
+        font-size: calcular-font-size(0);//$font_sz1rem;
+
+        &:focus {
+          border: $border-width2px solid $border_focus;
+        }
+      }
+
+      textarea {
+        field-sizing: content;
+      }
+    }
+
+    .boto-enviar {
+      @include boto-enviar("large", $hover: true);
+    }
+  }
+
+  .titol {
+    color: ajustar-color($titol_color_Blue, dark);
+    font-size: calcular-font-size(2);//$font_sz1_5rem;
+  }
+
+  .targeta-producte {
+    @include card("outlined", $distancia2, $rounded-soft: false, $interactive: false);
+    width: $distancia300px;
+  }
+
+  .descripcio {
+    color: $text_color_gray;
+    font-size: calcular-font-size(0);//$font_sz1rem;
+  }
+
+  .preu {
+    color: $text_color_green;
+    @include font-bold();
+    font-size: calcular-font-size(3);//$font_sz2rem;
+  }
+}

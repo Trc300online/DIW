@@ -1,0 +1,82 @@
+$box_shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box_shadow_hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+$titol_color: darkkhaki;
+$distancia1: 1rem;
+$distancia0_5: $distancia1 * 0.5;
+$distancia1_5: $distancia1 * 1.5;
+$distancia2: $distancia1 * 2;
+$distancia2_5: $distancia1 * 2.5;
+$distancia7_5: $distancia1 * 7.5;
+$distancia18: $distancia1 * 18;
+$bg_boto_submit: green;
+$bg_boto_submit_dark: darkgreen;
+$color_boto_submit: white;
+$border_color: black;
+$border_focus: blue;
+$border-width1rem: 1rem;
+$border-width0_25rem: $border-width1rem * 0.25;
+$border_radius1px: 1px;
+$border_radius1x100: 1%;
+$border_radius50x100: $border_radius1x100 * 50;
+$border_radius1rem: 1rem;
+$border_radius0_5rem: $border_radius1rem * 0.5;
+$font_sz1: 1rem;
+$font_sz1_5: $font_sz1 * 1.5;
+$link_color: blue;
+$bg_color_main: lightgreen;
+$bg_color2: lightblue;
+$bg_color3: lightyellow;
+$gap1: 1rem;
+$gap0_75: $gap1 * 0.75;
+$gap1_5: $gap1 * 1.5;
+$text_color_darkGray: darkgray;
+$text_color_lightGray: lightgray;
+$text_color_white: white;
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding: 0 $distancia2_5;
+    background-color: lightyellow;
+
+    .logo {
+        display: block;
+
+        img {
+            width: $distancia2_5;
+        }
+    }
+
+    .navegacio {
+        display: inline;
+        gap: 0.3rem;
+
+        .enllaç {
+            padding: 0.625rem 0.9375rem;
+            color: darkgray;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+                /*content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0.2rem;    
+                background-color: blue;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+                pointer-events: none;*/
+            }
+
+            &:hover, &.actiu {
+                color: $link_color;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+

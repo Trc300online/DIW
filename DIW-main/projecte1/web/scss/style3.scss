@@ -1,0 +1,75 @@
+$box_shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box_shadow_hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+$titol_color: darkkhaki;
+$distancia1: 1rem;
+$distancia0_5: $distancia1 * 0.5;
+$distancia1_5: $distancia1 * 1.5;
+$distancia2: $distancia1 * 2;
+$distancia2_5: $distancia1 * 2.5;
+$distancia7_5: $distancia1 * 7.5;
+$distancia18: $distancia1 * 18;
+$bg_boto_submit: green;
+$bg_boto_submit_dark: darkgreen;
+$color_boto_submit: white;
+$border_color: black;
+$border_focus: blue;
+$border-width1rem: 1rem;
+$border-width0_25rem: $border-width1rem * 0.25;
+$border_radius1px: 1px;
+$border_radius1x100: 1%;
+$border_radius50x100: $border_radius1x100 * 50;
+$border_radius1rem: 1rem;
+$border_radius0_5rem: $border_radius1rem * 0.5;
+$font_sz1: 1rem;
+$font_sz1_5: $font_sz1 * 1.5;
+$link_color: blue;
+$bg_color_main: lightgreen;
+$bg_color2: lightblue;
+$bg_color3: lightyellow;
+$gap1: 1rem;
+$gap0_75: $gap1 * 0.75;
+$gap1_5: $gap1 * 1.5;
+$text_color_darkGray: darkgray;
+$text_color_lightGray: lightgray;
+$text_color_white: white;
+
+.formulari {
+    max-width: 36rem;
+    margin: auto;
+    padding: $distancia2;
+
+    .camp {
+        margin-bottom: $distancia1;
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: $distancia1;
+            border: 1px solid $border_color;
+            font-size: $font_sz1;
+
+            &:focus {
+                border: 2px solid $border_focus;
+            }
+
+            textarea {
+                field-sizing: content;
+            }
+        }
+    }
+
+    .boto-enviar {
+        padding: $distancia1;
+        background-color: $bg_boto_submit;
+        font-size: $font_sz1;
+        width: 100%;
+        color: $color_boto_submit;
+
+        &:hover {
+            background-color: $bg_boto_submit_dark;
+        }
+    }
+}

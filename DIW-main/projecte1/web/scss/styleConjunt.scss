@@ -1,0 +1,293 @@
+$box_shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box_shadow_hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+$distancia1: 1rem;
+$distancia0: $distancia1 * 0;
+$distancia0_5: $distancia1 * 0.5;
+$distancia0_625: $distancia1 * 0.625;
+$distancia0_9375: $distancia1 * 0.9375;
+$distancia1_5: $distancia1 * 1.5;
+$distancia2: $distancia1 * 2;
+$distancia2_5: $distancia1 * 2.5;
+$distancia4: $distancia1 * 4;
+$distancia7_5: $distancia1 * 7.5;
+$distancia18: $distancia1 * 18;
+$distancia36: $distancia1 * 36;
+$distancia1x100: 1%;
+$distancia33x100: $distancia1x100 * 33;
+$distancia100x100: $distancia1x100 * 100;
+$distancia1px: 1px;
+$distancia300px: $distancia1px * 300;
+
+$padding1: 1rem;
+$padding0: $padding1 * 0;
+$padding0_5: $padding1 * 0.5;
+$padding0_625: $padding1 * 0.625;
+$padding0_9375: $padding1 * 0.9375;
+$padding1_5: $padding1 * 1.5;
+$padding2: $padding1 * 2;
+$padding2_5: $padding1 * 2.5;
+$padding4: $padding1 * 4;
+$padding7_5: $padding1 * 7.5;
+$padding18: $padding1 * 18;
+$padding36: $padding1 * 36;
+$padding1x100: 1%;
+$padding33x100: $padding1x100 * 33;
+$padding100x100: $padding1x100 * 100;
+
+$margin1: 1rem;
+$margin0: $margin1 * 0;
+$margin0_5: $margin1 * 0.5;
+$margin0_625: $margin1 * 0.625;
+$margin0_9375: $margin1 * 0.9375;
+$margin1_5: $margin1 * 1.5;
+$margin2: $margin1 * 2;
+$margin2_5: $margin1 * 2.5;
+$margin4: $margin1 * 4;
+$margin7_5: $margin1 * 7.5;
+$margin18: $margin1 * 18;
+$margin36: $margin1 * 36;
+$margin1x100: 1%;
+$margin33x100: $margin1x100 * 33;
+$margin100x100: $margin1x100 * 100;
+
+$border-width1rem: 1rem;
+$border-width0_25rem: $border-width1rem * 0.25;
+$border-width1px: 1px;
+$border-width2px: $border-width1px * 2;
+
+$border_radius1px: 1px;
+$border_radius1x100: 1%;
+$border_radius50x100: $border_radius1x100 * 50;
+$border_radius1rem: 1rem;
+$border_radius0_5rem: $border_radius1rem * 0.5;
+
+$font_sz1rem: 1rem;
+$font_sz1_5rem: $font_sz1rem * 1.5;
+$font_sz2rem: $font_sz1rem * 2;
+$font_sz1px: 1px;
+$font_sz18px: $font_sz1px * 18;
+
+$gap1: 1rem;
+$gap0_3: $gap1 * 0.3;
+$gap0_75: $gap1 * 0.75;
+$gap1_5: $gap1 * 1.5;
+
+$scale1: 1;
+$scale1_1: $scale1 * 1.1;
+
+$transition_time1: 1s;
+$transition_time0_3: $transition_time1 * 0.3;
+
+$text_color_darkGray: darkgray;
+$text_color_lightGray: lightgray;
+$text_color_white: white;
+$text_color_gray: gray;
+$text_color_green: green;
+$link_color: blue;
+$bg_color_main: lightgreen;
+$bg_color2: lightblue;
+$bg_color3: lightyellow;
+$bg_boto_submit: green;
+$bg_boto_submit_dark: darkgreen;
+$color_boto_submit: white;
+$border_color: black;
+$border_focus: blue;
+$titol_color_darkKhaki: darkkhaki;
+$titol_color_dBlue: darkblue;
+
+body {
+  background-color: $bg_color3;
+
+  .header,
+  .galeria,
+  .equip {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    align-items: center;
+    height: $distancia4;
+    padding: $padding0 $padding2_5;
+
+    .logo img {
+      width: $distancia2_5;
+    }
+
+    .navegacio {
+      display: inline;
+      gap: $gap0_3;
+
+      .enllaç {
+        padding: $padding0_625 $padding0_9375;
+        color: $text_color_darkGray;
+        text-decoration: none;
+        position: relative;
+
+        &:hover,
+        &.actiu {
+          color: $link_color;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .galeria {
+    padding: $padding2;
+    gap: $gap1;
+
+    .galeria-item {
+      width: $distancia33x100;
+
+      .imatge-container {
+        overflow: hidden;
+        box-shadow: $box_shadow;
+
+        img {
+          display: block;
+          width: $distancia100x100;
+
+          &:hover {
+            box-shadow: $box_shadow_hover;
+            scale: $scale1_1;
+          }
+        }
+      }
+
+      .titol {
+        justify-self: center;
+        font-size: $font_sz18px;
+        color: $titol_color_darkKhaki;
+        margin-top: $margin1;
+      }
+    }
+  }
+
+  .equip {
+    gap: $gap1_5;
+    padding: $padding2_5;
+    background-color: $bg_color_main;
+
+    .membre-card {
+      width: $distancia18;
+      background-color: $bg_color2;
+      border-radius: $border_radius0_5rem;
+      padding: $padding1_5;
+      text-align: center;
+      transition: transform $transition_time0_3 ease;
+
+      .avatar {
+        height: $distancia7_5;
+        width: $distancia7_5;
+        margin-bottom: $margin1;
+        border: $border-width0_25rem solid $border_focus;
+        object-fit: cover;
+      }
+
+      .nom {
+        color: $text_color_darkGray;
+        font-size: $font_sz1_5rem;
+        font-weight: bold;
+        margin-bottom: $margin0_5;
+      }
+
+      .carrec {
+        color: $text_color_lightGray;
+        font-size: $font_sz1rem;
+        margin-bottom: $margin1;
+      }
+
+      .xarxes {
+        display: flex;
+        justify-content: center;
+        gap: $gap0_75;
+
+        .xarxa-enllaç {
+          display: inline-block;
+          width: $distancia2_5;
+          height: $distancia2_5;
+          border-radius: $border_radius50x100;
+          background-color: $bg_color3;
+          color: $text_color_lightGray;
+          line-height: $distancia2_5;
+          transition: all $transition_time0_3 ease;
+          text-decoration: none;
+
+          &:hover {
+            background-color: $link_color;
+            color: $text_color_white;
+          }
+        }
+      }
+
+      &:hover {
+        transform: translateY(-$distancia0_5);
+      }
+    }
+  }
+
+  .formulari {
+    max-width: $distancia36;
+    margin: auto;
+    padding: $padding2;
+
+    .camp {
+      margin-bottom: $margin1;
+
+      label {
+        font-weight: bold;
+      }
+
+      input {
+        width: $distancia100x100;
+        padding: $padding1;
+        border: $border-width1px solid $border_color;
+        font-size: $font_sz1rem;
+
+        &:focus {
+          border: $border-width2px solid $border_focus;
+        }
+      }
+
+      textarea {
+        field-sizing: content;
+      }
+    }
+
+    .boto-enviar {
+      padding: $padding1;
+      background-color: $bg_boto_submit;
+      font-size: $font_sz1rem;
+      width: $distancia100x100;
+      color: $color_boto_submit;
+
+      &:hover {
+        background-color: $bg_boto_submit_dark;
+      }
+    }
+  }
+
+  .titol {
+    color: $titol_color_dBlue;
+    font-size: $font_sz1_5rem;
+  }
+
+  .targeta-producte {
+    width: $distancia300px;
+    border: $border-width1px solid $border_color;
+    padding: $padding1_5;
+  }
+
+  .descripcio {
+    color: $text_color_gray;
+    font-size: $font_sz1rem;
+  }
+
+  .preu {
+    color: $text_color_green;
+    font-weight: bold;
+    font-size: $font_sz2rem;
+  }
+}

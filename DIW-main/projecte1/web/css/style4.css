@@ -1,0 +1,29 @@
+.galeria {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  gap: 1rem;
+}
+.galeria .galeria-item {
+  width: 33%;
+}
+.galeria .galeria-item .imatge-container {
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.galeria .galeria-item .imatge-container img {
+  display: block;
+  width: 100%;
+}
+.galeria .galeria-item .imatge-container img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  scale: 1.1;
+}
+.galeria .galeria-item .titol {
+  justify-self: center;
+  font-size: 18px;
+  color: darkkhaki;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style4.css.map */

@@ -1,0 +1,22 @@
+@function space-mar-pad($valor) {
+    @if $valor == 0 {
+        @return 0rem;
+    } @if $valor == 1 {
+        @return 0.25rem; 
+    }  @if $valor == 2 {
+        @return 0.5rem;
+    } @if $valor == 3 {
+        @return 0.75rem; 
+    }  @if $valor == 4 {
+        @return 1rem;
+    } @if $valor == 5 {
+        @return 1.5rem; 
+    } @if $valor == 6 {
+        @return 2rem; 
+    } @if $valor == 7 {
+        @return 3rem; 
+    } @if $valor == 8 {
+        @return 4rem; 
+    }
+}
+

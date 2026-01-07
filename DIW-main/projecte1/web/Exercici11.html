@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activitat 11 - Aprofundiment flexbox</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="h-screen">
+
+    <div class="flex h-full flex-row">
+
+        <aside class="flex bg-slate-800 text-white flex-col max-w-15/100 h-screen pt-5 z-100">
+            <h2 class="pl-5 text-xl font-bold">Dashboard</h2>
+            <nav class="flex flex-col p-5 h-screen">
+                <a href="#" class="mb-1 py-2 pl-5 rounded hover:bg-slate-600">Inici</a>
+                <a href="#" class="mb-1 py-2 pl-5 rounded hover:bg-slate-600">Estadístiques</a>
+                <a href="#" class="mb-1 py-2 pl-5 rounded hover:bg-slate-600">Usuaris</a>
+                <a href="#" class="mt-auto mb-1 py-2 pl-5 rounded hover:bg-slate-600">Configuració</a>
+            </nav>
+        </aside>
+
+        <main class="w-full">
+
+            <header class="flex p-5 w-full justify-between">
+                <div>
+                    <h1>Benvingut, Admin!</h1>
+                    <p>Última connexió: 10 desembre 2025</p>
+                </div>
+                <div class="flex flex-row-reverse self-center">
+                    <span>OR</span>
+                    <img src="https://i.pravatar.cc/50" alt="Avatar" class="order-1 rounded-full self-center">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <section>
+                
+                <div>
+                    <span>Usuaris</span>
+                    <span>1,234</span>
+                    <span>+12%</span>
+                </div>
+
+                <div>
+                    <span>Vendes</span>
+                    <span>567</span>
+                    <span>+8%</span>
+                </div>
+
+                <div>
+                    <span>Ingressos</span>
+                    <span>12,450€</span>
+                    <span>+23%</span>
+                </div>
+
+                <div>
+                    <span>Visites</span>
+                    <span>8,901</span>
+                    <span>-5%</span>
+                </div>
+
+            </section>
+
+            <section>
+
+                <div>
+                    <h3>Tasques pendents</h3>
+                    <ul>
+                        <li>
+                            <span>Revisar comandes</span>
+                            <span>Alta</span>
+                        </li>
+                        <li>
+                            <span>Contactar proveïdors</span>
+                            <span>Mitjana</span>
+                        </li>
+                        <li>
+                            <span>Actualitzar inventari</span>
+                            <span>Baixa</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Activitat recent</h3>
+                    <ul>
+                        <li>
+                            <span>Nova venda</span>
+                            <span>Fa 5 min</span>
+                        </li>
+                        <li>
+                            <span>Nou usuari registrat</span>
+                            <span>Fa 15 min</span>
+                        </li>
+                        <li>
+                            <span>Comentari rebut</span>
+                            <span>Fa 1 hora</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <footer>
+                <p>© 2025 Polithecnic Llevant Dashboard</p>
+                <div>
+                    <a href="#">Termes</a>
+                    <a href="#">Privacitat</a>
+                    <a href="#">Ajuda</a>
+                </div>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -31,7 +31,42 @@ const tableData = [
 function App() {
   return (
     <div className='body'>
-      <p>Comença a crear la teva pàgina de documentació aquí!</p>
+      <p className='h1'>Comença a crear la teva pàgina de documentació aquí!</p>
+      <p className='h2'>Comença a crear la teva pàgina de documentació aquí!</p>
+      <p className='h3'>Comença a crear la teva pàgina de documentació aquí!</p>
+      <p className='a'>Comença a crear la teva pàgina de documentació aquí!</p>
+      <p className='code'>Comença a crear la teva pàgina de documentació aquí!</p>
+      <p className='pre'>Comença a crear la teva pàgina de documentació aquí!</p>
+      <table className='table'>
+        <tr>
+          <th className='th'>asdfasdf</th>
+          <th className='th'>asd</th>
+        </tr>
+        <tr>
+          <td className='td'>assdfffsdf</td>
+          <td className='td'>alkjhlkj</td>
+        </tr>
+      </table>
+      <blockquote className='blockquote'>sfasdfasdf asdf  asdfasdfasdf asdf asf</blockquote>
+      <hr className='hr'/>
+      <hr className='hr'/>
+      <hr className='hr'/>
+      <ul className='ul'>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+      </ul>
+      <ol className='ol'>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+      </ol>
+
+      <p className='alert'>asdfhklasjdfhlsjkadfhaskjdfhaskljfhaskjldfhsaf</p>
+      <p className='p'>Comença a crear la teva pàgina de documentació aquí! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quas sapiente perferendis hic voluptates culpa quibusdam. Vel unde, nisi officiis dignissimos mollitia repudiandae autem magnam. Error fugit minus rerum obcaecati.</p>
+      <p className='p'>Comença a crear la teva pàgina de documentació aquí! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, laudantium fugiat at aspernatur explicabo a ut, nam pariatur repellat inventore perspiciatis voluptates aut dolores delectus esse sunt ducimus veniam harum.</p>
     </div>
   )
 }

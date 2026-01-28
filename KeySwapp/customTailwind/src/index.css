@@ -4,6 +4,7 @@
 @theme {
     --font-sans: "Inter", sans-serif;
     --font-mono: "Fira Code", monospace;
+    --font-montse: "Montserrat", sans-serif;
 
     --color-brand: #6366F1;
     --color-brand-dark: #4F46E5;
@@ -23,10 +24,68 @@
     .body {
         @apply bg-blue-300 
     }
+
+    .h1 {
+        @apply text-2xl font-bold p-3 m-3 font-mono
+    }
+
+    .h2 {
+        @apply text-xl font-semibold p-5 m-5 font-sans
+    }
+
+    .h3 {
+        @apply text-lg font-medium p-7 m-7 font-montse
+    }
+
+    .p {
+        @apply m-9 leading-10
+    }
+
+    .a {
+        @apply text-text hover:text-text-muted
+    }
+
+    .code {
+        @apply font-mono bg-gray-300 p-7
+    }
+
+    .pre {
+        @apply bg-gray-700 p-8 rounded-lg
+    }
+
+    .table {
+        @apply border-2 p-3 justify-self-center
+    }
+
+    .th {
+        @apply justify-self-center border-2 p-2
+    }
+
+    .td {
+        @apply justify-self-start border-2 p-2
+    }
+
+    .blockquote {
+        @apply border-x-10 p-3 italic
+    }
+
+    .ul {
+        @apply m-5 p-3 list-disc
+    }
+
+    .ol {
+        @apply m-5 p-3 list-[upper-roman]
+    }
+
+    .hr {
+        @apply text-green-300 m-5
+    }
 }
 
 @layer components {
-
+    .alert {
+        @apply p-10 m-5 bg-bg-alt border-2 border-[bg-alt]/70 rounded-md
+    }
 }
 
 @layer utilities{

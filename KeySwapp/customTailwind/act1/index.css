@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-marca: #6366F1;
+  --color-accent: #F59E0B;
+  --color-fons: #1E1B4B;
+  --color-text-clar: #E0E7FF;
+
+  --font-titol: "Montserrat", sans-serif;
+
+  --spaceing-18: 4,5 rem;
+}
+

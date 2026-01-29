@@ -83,8 +83,52 @@
 }
 
 @layer components {
-    .alert {
+    .alert, .alert-info, .alert-warning, .alert-error, .alert-success {
         @apply p-10 m-5 bg-bg-alt border-2 border-[bg-alt]/70 rounded-md
+    }
+
+    .alert-info {
+        @apply bg-info
+    }
+
+    .alert-warning {
+        @apply bg-warning
+    }
+
+    .alert-error {
+        @apply bg-error
+    }
+
+    .alert-success {
+        @apply bg-success
+    }
+
+    .card {
+        @apply rounded-lg shadow-lg px-15 py-5
+    }
+
+    .btn, .btn-primary, .btn-secondary {
+        @apply rounded-lg border-2 px-4 py-2 mx-5
+    }
+
+    .btn-primary {
+        @apply border-brand bg-[brand]/50
+    }
+
+    .btn-secondary {
+        @apply border-brand-dark bg-[brand-dark]/50
+    }
+
+    .badge {
+        @apply rounded-full bg-bg-alt px-4 py-2 mx-2 my-3 text-xs w-fit
+    }
+
+    .nav-link, .nav-link-active {
+        @apply px-15 py-8 mx-3 my-2 text-text hover:text-text-muted
+    }
+
+    .nav-link-active {
+        @apply active:bg-bg-alt
     }
 }
 

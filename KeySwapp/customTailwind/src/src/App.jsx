@@ -13,6 +13,9 @@ function App() {
             <ThemeToggle isDark={isDark} onToggle={toggleDark} />
             <ThemeSelector currentTheme={colorTheme} onSelect={setColorTheme} />
             <Dashboard />
+
+            <br />
+            <p>asdfasf</p>
         </div>
     )
 }

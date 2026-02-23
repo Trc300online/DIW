@@ -8,29 +8,23 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <>       
+      <section className='flex bg-fons max-w-fit pl-5 rounded-2xl'>
+        <img src="" alt="pfp" className='bg-gray-100 rounded-full size-[100px] place-self-center'/>
+        <section className='max-w-50 m-18'>
+          <section>
+            <p className='font-titol text-marca'>Toni Riera Colomar</p>
+            <p className='text-accent'>Informatic</p>
+            <p className='text-text-clar'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </section>
+          <section className='flex pt-9 justify-around'>
+            <button className='text-text-clar'>button1</button>
+            <button className='text-accent'>button2</button>
+          </section>
+        </section>
+      </section>
 
-      <h1 className='text-red-500'>TONI</h1>
+
     </>
   )
 }
